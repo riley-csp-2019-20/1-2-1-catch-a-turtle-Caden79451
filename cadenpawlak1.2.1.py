@@ -22,9 +22,12 @@ keeper.shapesize(turtlesize)
 keeper.ht()
 
 keeper.penup()
-keeper.goto(-300, 300)
+keeper.goto(-370, 270)
 keeper.pendown()
-keeper.write(score)
+
+font_setup = ("Ariel", 30, "bold")
+keeper.clear()
+keeper.write(score, font=font_setup)
 
 #-----game functions--------
 def turtle_clicked(x,y):
@@ -44,6 +47,10 @@ def update_score():
     global score
     score += 1
     print(score)
+    keeper.clear()
+    keeper.write(score, font=font_setup)
+
+    
 
 #-----events----------------
 
